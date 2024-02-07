@@ -1,7 +1,7 @@
-import "./App.css";
+import Editor from "@easy_made/editor";
 
 function App() {
-    return <Button />;
+    return <Editor />;
 }
 
 export default App;

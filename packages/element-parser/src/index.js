@@ -1,3 +1,3 @@
-import component from "./Elements";
+import RenderComponent from "./Components/RenderComponent";
 
-export default component;
+export default RenderComponent;

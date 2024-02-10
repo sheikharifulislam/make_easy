@@ -1,13 +1,15 @@
 import React from "react";
 
 const Container = ({ children }) => {
+    console.log(children);
+
     return (
         <div
             style={{
-                borde: "border 1px solid red",
+                border: "1px solid red",
             }}
         >
-            {children}{" "}
+            {children}
         </div>
     );
 };

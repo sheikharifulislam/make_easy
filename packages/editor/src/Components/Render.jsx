@@ -5,7 +5,7 @@ const Render = ({ elements }) => {
         <>
             {elements.map((item) => (
                 <RenderComponent key={item.id} item={item}>
-                    {Array.isArray(item.child) && <Render elements={elements} />}
+                    {Array.isArray(item.child) ? <Render elements={item.child} /> : item.content}
                 </RenderComponent>
             ))}
         </>

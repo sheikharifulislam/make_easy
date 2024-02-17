@@ -1,9 +1,9 @@
 import components from "../Elements";
 
-const RenderComponent = ({ item }) => {
-    console.log("from item", item);
+const RenderComponent = ({ item, children }) => {
+    // console.log("from item", item);
     const Component = components[item.type];
-    return <Component />;
+    return <Component item={item}>{children}</Component>;
 };
 
 export default RenderComponent;

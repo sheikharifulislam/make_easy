@@ -16,6 +16,7 @@ const elements = [
                         type: "button",
                         name: "Button",
                         content: "This is Button",
+                        style: [],
                     },
                 ],
             },
@@ -31,6 +32,19 @@ const elements = [
                 type: "text",
                 name: "text",
                 content: "This is Text",
+            },
+        ],
+    },
+    {
+        type: "container",
+        name: "Container",
+        id: uuidv4(),
+        child: [
+            {
+                type: "img",
+                name: "image",
+                id: uuidv4(),
+                src: "https://cdn.pixabay.com/photo/2024/01/31/19/56/tulips-8544741_1280.jpg",
             },
         ],
     },

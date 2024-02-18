@@ -1,16 +1,38 @@
 const tab = {
     root: {
+        id: "1",
         children: ["61620557-88bf-e100-f971-b19de5533eeb"],
     },
     "61620557-88bf-e100-f971-b19de5533eeb": {
+        id: "61620557-88bf-e100-f971-b19de5533eeb",
         type: "container",
         tag: "section",
         children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d"],
+        data: {
+            style: {
+                border: "1px solid red",
+                padding: "10px 20px",
+            },
+        },
     },
+    // "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d": {
+    //     id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d",
+    //     type: "text",
+    //     data: {
+    //         content: "lorem ipsum dolor sit amet, consectetur adip",
+    //         style: {
+    //             backgroundColor: "red",
+    //             color: "blue",
+    //             fontStyle: "italic",
+    //         },
+    //         attr: {
+    //             "data-id": "abc",
+    //         },
+    //     },
+    // },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d": {
-        type: "tabWrapper",
-        tag: "div",
-        classes: [],
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d",
+        type: "tab",
         children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f2e", "1ad0de13-a26d-d3a2-4481-4cf3fcb74f38"],
         data: {
             tabs: {
@@ -23,7 +45,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2e": {
-        type: "TabsMenu",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2e",
+        type: "tabMenu",
         tag: "div",
         classes: [],
         children: [
@@ -39,7 +62,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2f": {
-        type: "TabsLink",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2f",
+        type: "tabLink",
         tag: "a",
         classes: [],
         children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f30"],
@@ -54,7 +78,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f32": {
-        ype: "TabsLink",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f32",
+        type: "tabLink",
         tag: "a",
         classes: [],
         children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f33"],
@@ -69,7 +94,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f35": {
-        type: "TabsLink",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f35",
+        type: "tabLink",
         tag: "a",
         classes: [],
         children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f36"],
@@ -84,7 +110,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f38": {
-        type: "TabsContent",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f38",
+        type: "tabContent",
         tag: "div",
         classes: [],
         children: [
@@ -100,52 +127,32 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f30": {
-        type: "Block",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f30",
+        type: "textBlock",
         tag: "div",
-        classes: [],
-        children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f31"],
         data: {
-            tag: "div",
-            text: true,
+            content: "Tab One",
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f33": {
-        type: "Block",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f33",
+        type: "textBlock",
         tag: "div",
-        classes: [],
-        children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f34"],
         data: {
-            tag: "div",
-            text: true,
+            content: "Tab Two",
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f36": {
         id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f36",
-        type: "Block",
+        type: "textBlock",
         tag: "div",
-        classes: [],
-        children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f37"],
         data: {
-            tag: "div",
-            text: true,
+            content: "Tab Three",
         },
     },
-    "1ad0de13-a26d-d3a2-4481-4cf3fcb74f31": {
-        text: true,
-        v: "Tab 1",
-    },
-    "1ad0de13-a26d-d3a2-4481-4cf3fcb74f34": {
-        _id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f34",
-        text: true,
-        v: "Tab 2",
-    },
-    "1ad0de13-a26d-d3a2-4481-4cf3fcb74f37": {
-        _id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f37",
-        text: true,
-        v: "Tab 3",
-    },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f39": {
-        type: "TabsPane",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f39",
+        type: "tabPane",
         tag: "div",
         classes: [],
         children: ["a2f94f44-bf35-f40d-1e74-fcf3a0b08b73"],
@@ -160,8 +167,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f3a": {
-        _id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f3a",
-        type: "TabsPane",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f3a",
+        type: "tabPane",
         tag: "div",
         classes: [],
         children: ["5bd74ac8-c9ec-7c2f-9247-f03a2f4f97ca"],
@@ -176,8 +183,8 @@ const tab = {
         },
     },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f3b": {
-        _id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f3b",
-        type: "TabsPane",
+        id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f3b",
+        type: "tabPane",
         tag: "div",
         classes: [],
         children: ["ca577dbf-e2c8-6d1d-1a53-2bea8c0886d1"],
@@ -192,8 +199,8 @@ const tab = {
         },
     },
     "a2f94f44-bf35-f40d-1e74-fcf3a0b08b73": {
-        _id: "a2f94f44-bf35-f40d-1e74-fcf3a0b08b73",
-        type: "Image",
+        id: "a2f94f44-bf35-f40d-1e74-fcf3a0b08b73",
+        type: "img",
         tag: "img",
         children: [],
         data: {
@@ -225,28 +232,20 @@ const tab = {
         },
     },
     "5bd74ac8-c9ec-7c2f-9247-f03a2f4f97ca": {
-        _id: "5bd74ac8-c9ec-7c2f-9247-f03a2f4f97ca",
-        type: "Paragraph",
-        tag: "p",
-        children: ["5bd74ac8-c9ec-7c2f-9247-f03a2f4f97cb"],
-        data: {},
-    },
-    "ca577dbf-e2c8-6d1d-1a53-2bea8c0886d1": {
-        _id: "ca577dbf-e2c8-6d1d-1a53-2bea8c0886d1",
-        type: "Heading",
-        tag: "h1",
-        children: ["ca577dbf-e2c8-6d1d-1a53-2bea8c0886d2"],
+        id: "5bd74ac8-c9ec-7c2f-9247-f03a2f4f97ca",
+        type: "text",
         data: {
-            tag: "h1",
+            content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere",
         },
     },
-    "5bd74ac8-c9ec-7c2f-9247-f03a2f4f97cb": {
-        text: true,
-        v: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
-    },
-    "ca577dbf-e2c8-6d1d-1a53-2bea8c0886d2": {
-        text: true,
-        v: "This is Last Tab",
+    "ca577dbf-e2c8-6d1d-1a53-2bea8c0886d1": {
+        id: "ca577dbf-e2c8-6d1d-1a53-2bea8c0886d1",
+        type: "title",
+        tag: "h1",
+        data: {
+            content: "This is Last Tab",
+        },
     },
 };
 

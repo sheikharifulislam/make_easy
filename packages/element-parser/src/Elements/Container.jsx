@@ -1,18 +1,7 @@
 import React from "react";
 
-const Container = ({ children }) => {
-    console.log(children);
-
-    return (
-        <div
-            style={{
-                border: "1px solid red",
-                margin: "10px",
-            }}
-        >
-            {children}
-        </div>
-    );
+const Container = ({ children, className }) => {
+    return <div className={className}>{children}</div>;
 };
 
 export default Container;

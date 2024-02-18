@@ -24,13 +24,13 @@
     },
     "exports": {
         ".": {
-            "import": "./dist/index.es.js",
-            "require": "./dist/index.cjs.js"
+            "import": "./src/index.js",
+            "require": "./src/index.js"
         }
     },
-    "main": "./dist/index.cjs.js",
-    "module": "./dist/index.es.js",
+    "main": "./src/index.js",
+    "module": "./src/index.js",
     "files": [
-        "dist"
+        "src"
     ]
 }

@@ -20,6 +20,19 @@ const elements = [
                     },
                 ],
             },
+            {
+                id: uuidv4(),
+                name: "Container",
+                type: "container",
+                child: [
+                    {
+                        type: "img",
+                        name: "image",
+                        id: uuidv4(),
+                        src: "https://cdn.pixabay.com/photo/2024/01/31/19/56/tulips-8544741_1280.jpg",
+                    },
+                ],
+            },
         ],
     },
     {

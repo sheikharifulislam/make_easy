@@ -18,7 +18,7 @@ const Render = ({ elements }) => {
 
     return (
         <>
-            {elements.map((id) => {
+            {/* {elements.map((id) => {
                 const className = generateClassName(id);
                 return (
                     <RenderComponent key={data[id].id} item={data[id]} className={className}>
@@ -29,6 +29,11 @@ const Render = ({ elements }) => {
                         )}
                     </RenderComponent>
                 );
+            })} */}
+
+            {elements.map((id) => {
+                const className = generateClassName(id);
+                return <RenderComponent key={data[id].id} item={data[id]} className={className} />;
             })}
         </>
     );

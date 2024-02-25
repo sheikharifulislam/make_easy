@@ -1,12 +1,12 @@
 import React from "react";
 
-const Text = ({ children, className, item }) => {
+const Text = ({ className, element }) => {
     const {
-        data: { attr },
-    } = item;
+        data: { attr, content },
+    } = element;
     return (
         <p className={className} {...attr}>
-            {children}
+            {content}
         </p>
     );
 };

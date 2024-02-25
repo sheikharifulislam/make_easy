@@ -1,6 +1,11 @@
-const TabMenu = ({ children }) => {
-    console.log("from tab menus", children);
-    return <div className="tab-menu">{children}</div>;
+import RenderElements from "../../Components/RenderElement";
+
+const TabMenu = ({ element, getChildElements }) => {
+    return (
+        <div>
+            <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
+        </div>
+    );
 };
 
 export default TabMenu;

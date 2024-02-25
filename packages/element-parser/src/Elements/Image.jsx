@@ -1,9 +1,9 @@
 import React from "react";
 
-const Image = ({ item }) => {
+const Image = ({ element }) => {
     const {
         data: { attr },
-    } = item;
+    } = element;
 
     return <img src={attr.src} alt="" />;
 };

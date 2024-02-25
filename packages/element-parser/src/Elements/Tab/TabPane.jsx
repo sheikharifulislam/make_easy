@@ -1,5 +1,11 @@
-const TabPane = ({ children }) => {
-    return <div className="tab-pane">{children}</div>;
+import RenderElements from "../../Components/RenderElement";
+
+const TabPane = ({ getChildElements, element }) => {
+    return (
+        <div>
+            <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
+        </div>
+    );
 };
 
 export default TabPane;

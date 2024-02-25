@@ -1,5 +1,7 @@
-const TabLink = ({ children }) => {
-    console.log("from tab link", children);
+import RenderElements from "../../Components/RenderElement";
+
+const TabLink = ({ element, getChildElements }) => {
+    console.log("from TabLink", element);
     return (
         <a
             style={{
@@ -9,7 +11,7 @@ const TabLink = ({ children }) => {
             className="tab-link"
             onClick={(e) => e.preventDefault()}
         >
-            {children}
+            <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
         </a>
     );
 };

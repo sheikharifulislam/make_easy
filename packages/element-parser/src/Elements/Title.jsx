@@ -1,5 +1,5 @@
-const Title = ({ children }) => {
-    return <h1>{children}</h1>;
+const Title = ({ element }) => {
+    return <h1>{element.data.content}</h1>;
 };
 
 export default Title;

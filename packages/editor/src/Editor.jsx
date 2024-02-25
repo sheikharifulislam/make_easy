@@ -1,17 +1,15 @@
-import { useEffect } from "react";
-import Render from "./Components/Render";
-import elements from "./data/tab";
-import generateStyles from "./util/generateStyle";
+import Render from "@easy_made/element-parser";
+import elements from "./data/newDataStructure";
 
 const Editor = () => {
-    useEffect(() => {
-        const css = generateStyles(elements["root"].children, elements);
-        const style = document.createElement("style");
-        style.textContent = css;
-        document.head.appendChild(style);
-    }, []);
+    // useEffect(() => {
+    //     const css = generateStyles(elements["root"].children, elements);
+    //     const style = document.createElement("style");
+    //     style.textContent = css;
+    //     document.head.appendChild(style);
+    // }, []);
 
-    return <Render elements={elements["root"].children} />;
+    return <Render data={elements} />;
 };
 
 export default Editor;

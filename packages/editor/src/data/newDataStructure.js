@@ -6,6 +6,20 @@ const data = {
             tag: "section",
             data: { style: { border: "1px solid red", padding: "10px 20px" } },
         },
+        {
+            id: "61620557-88bf-e100-f971-ry38ry89er",
+            type: "container",
+            tag: "section",
+        },
+    ],
+    "61620557-88bf-e100-f971-ry38ry89er": [
+        {
+            id: "61620557-88bf-e100-f971-ey8fyeoi3ir",
+            type: "text",
+            data: {
+                content: "lorem ipsum dolor sit amet, consectetur adip",
+            },
+        },
     ],
     "61620557-88bf-e100-f971-b19de5533eeb": [
         {

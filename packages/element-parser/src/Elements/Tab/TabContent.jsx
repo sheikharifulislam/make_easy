@@ -1,10 +1,17 @@
-import RenderElements from "../../Components/RenderElement";
+import TabPane from "./TabPane";
 
-const TabContent = ({ element, getChildElements }) => {
-    console.log("from TabContent", element);
+const TabContent = ({ element, getChildElements, currentActiveTab }) => {
+    const childElements = getChildElements(element.id);
+    console.log("from TabContent", childElements);
     return (
         <div>
-            <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
+            {childElements.map((item, index) => (
+                <>
+                    {currentActiveTab === index && (
+                        <TabPane key={item.id} element={item} getChildElements={getChildElements} />
+                    )}
+                </>
+            ))}
         </div>
     );
 };

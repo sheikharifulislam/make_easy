@@ -1,7 +1,6 @@
 import RenderElements from "../../Components/RenderElement";
 
-const TabLink = ({ element, getChildElements }) => {
-    console.log("from TabLink", element);
+const TabLink = ({ element, getChildElements, setActiveTab, index }) => {
     return (
         <a
             style={{
@@ -9,7 +8,9 @@ const TabLink = ({ element, getChildElements }) => {
                 margin: "0 15px",
             }}
             className="tab-link"
-            onClick={(e) => e.preventDefault()}
+            onClick={(e) => {
+                e.preventDefault(), setActiveTab(index);
+            }}
         >
             <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
         </a>

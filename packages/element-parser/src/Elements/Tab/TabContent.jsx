@@ -1,17 +1,25 @@
-import TabPane from "./TabPane";
-
-const TabContent = ({ element, getChildElements, currentActiveTab }) => {
-    const childElements = getChildElements(element.id);
-    console.log("from TabContent", childElements);
+const TabContent = ({ children, activeTab }) => {
+    console.log("current active tab", activeTab);
     return (
         <div>
-            {childElements.map((item, index) => (
+            {/* {childElements.map((item, index) => (
                 <>
                     {currentActiveTab === index && (
                         <TabPane key={item.id} element={item} getChildElements={getChildElements} />
                     )}
                 </>
-            ))}
+            ))} */}
+
+            {/* <RenderElements
+                getChildElements={getChildElements}
+                elements={getChildElements(element.id)}
+                activeTab={activeTab}
+                isRenderElement={({ index }) => {
+                    console.log("from isRenderElement", index);
+                    if (activeTab === index) return true;
+                }}
+            /> */}
+            {children}
         </div>
     );
 };

@@ -1,9 +1,7 @@
-import TabLink from "./TabLink";
-
-const TabMenu = ({ element, getChildElements, setActiveTab }) => {
+const TabMenu = ({ element, getChildElements, setActiveTab, children }) => {
     return (
         <div>
-            {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
+            {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
             {getChildElements(element.id).map((item, index) => (
                 <TabLink
                     key={item.id}
@@ -12,7 +10,8 @@ const TabMenu = ({ element, getChildElements, setActiveTab }) => {
                     setActiveTab={setActiveTab}
                     index={index}
                 />
-            ))}
+            ))} */}
+            {children}
         </div>
     );
 };

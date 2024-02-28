@@ -1,9 +1,8 @@
-import RenderElements from "../../Components/RenderElement";
-
-const TabPane = ({ getChildElements, element }) => {
+const TabPane = ({ getChildElements, element, children }) => {
     return (
         <div>
-            <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
+            {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
+            {children}
         </div>
     );
 };

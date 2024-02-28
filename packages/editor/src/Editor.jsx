@@ -1,5 +1,5 @@
-import Render from "@easy_made/element-parser";
-import elements from "./data/newDataStructure";
+import RenderElements from "@easy_made/element-parser";
+import elements from "./data/tab";
 
 const Editor = () => {
     // useEffect(() => {
@@ -9,7 +9,7 @@ const Editor = () => {
     //     document.head.appendChild(style);
     // }, []);
 
-    return <Render data={elements} />;
+    return <RenderElements currentElements={elements.root.children} data={elements} />;
 };
 
 export default Editor;

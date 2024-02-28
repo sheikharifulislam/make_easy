@@ -1,7 +1,7 @@
 import React from "react";
 
-const Button = ({ element }) => {
-    return <button>{element.data.content}</button>;
+const Button = ({ element, children }) => {
+    return <button>{children} </button>;
 };
 
 export default Button;

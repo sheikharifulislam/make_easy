@@ -1,6 +1,5 @@
-const TextBlock = ({ element }) => {
-    console.log("from TextBlock", element);
-    return <span className="text-block">{element.data.content}</span>;
+const TextBlock = ({ children }) => {
+    return <span className="text-block">{children}</span>;
 };
 
 export default TextBlock;

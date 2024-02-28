@@ -1,11 +1,11 @@
 import React from "react";
 import widgets from "../Elements/index";
 
-const Element = ({ element, childElements, getChildElements, WrapperComponent, ...rest }) => {
+const Element = ({ element, children, ...rest }) => {
     const Widget = widgets[element.type];
     return (
         <>
-            {WrapperComponent ? (
+            {/* {WrapperComponent ? (
                 <WrapperComponent>
                     <Widget
                         element={element}
@@ -16,7 +16,10 @@ const Element = ({ element, childElements, getChildElements, WrapperComponent, .
                 </WrapperComponent>
             ) : (
                 <Widget element={element} childElements={childElements} getChildElements={getChildElements} {...rest} />
-            )}
+            )} */}
+            <Widget element={element} {...rest}>
+                {children}
+            </Widget>
         </>
     );
 };

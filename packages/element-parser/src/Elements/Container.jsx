@@ -1,7 +1,6 @@
 import React from "react";
-import RenderElements from "../Components/RenderElement";
 
-const Container = ({ element, getChildElements, childElements }) => {
+const Container = ({ element, getChildElements, childElements, children }) => {
     return (
         <div
             style={{
@@ -16,7 +15,8 @@ const Container = ({ element, getChildElements, childElements }) => {
                 />
             ))} */}
 
-            <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
+            {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
+            {children}
         </div>
     );
 };

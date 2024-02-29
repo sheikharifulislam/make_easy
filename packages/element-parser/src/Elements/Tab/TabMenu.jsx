@@ -1,4 +1,4 @@
-const TabMenu = ({ element, getChildElements, setActiveTab, children }) => {
+const TabMenu = ({ renderChild, setActiveTab }) => {
     return (
         <div>
             {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} />
@@ -11,7 +11,8 @@ const TabMenu = ({ element, getChildElements, setActiveTab, children }) => {
                     index={index}
                 />
             ))} */}
-            {children}
+            {/* {children} */}
+            {renderChild({ tabLink: { setActiveTab } })}
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Container = ({ element, getChildElements, childElements, children }) => {
+const Container = ({ element, getChildElements, childElements, children, renderChild }) => {
     return (
         <div
             style={{
@@ -16,7 +16,8 @@ const Container = ({ element, getChildElements, childElements, children }) => {
             ))} */}
 
             {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
-            {children}
+            {/* {children} */}
+            {renderChild()}
         </div>
     );
 };

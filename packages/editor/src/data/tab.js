@@ -15,21 +15,6 @@ const tab = {
             },
         },
     },
-    // "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d": {
-    //     id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d",
-    //     type: "text",
-    //     data: {
-    //         content: "lorem ipsum dolor sit amet, consectetur adip",
-    //         style: {
-    //             backgroundColor: "red",
-    //             color: "blue",
-    //             fontStyle: "italic",
-    //         },
-    //         attr: {
-    //             "data-id": "abc",
-    //         },
-    //     },
-    // },
     "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d": {
         id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d",
         type: "tab",

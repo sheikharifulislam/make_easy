@@ -1,5 +1,5 @@
-const TabContent = ({ children, activeTab }) => {
-    console.log("current active tab", activeTab);
+const TabContent = ({ children, activeTab, renderChild }) => {
+    // console.log("current active tab", activeTab);
     return (
         <div>
             {/* {childElements.map((item, index) => (
@@ -19,7 +19,8 @@ const TabContent = ({ children, activeTab }) => {
                     if (activeTab === index) return true;
                 }}
             /> */}
-            {children}
+            {/* {children} */}
+            {renderChild()}
         </div>
     );
 };

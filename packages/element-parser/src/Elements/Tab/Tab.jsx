@@ -1,16 +1,14 @@
 import { useState } from "react";
 
-const Tab = ({ element, children, passProps }) => {
+const Tab = ({ element, children, passProps, renderChild }) => {
     const [activeTab, setActiveTab] = useState(0);
-
-    console.log(element);
 
     const props = {
         tabMenu: { setActiveTab },
         tabContent: { activeTab },
     };
 
-    passProps(props[element.type]);
+    // useMemo(() => passProps(props), []);
 
     return (
         <>
@@ -23,7 +21,8 @@ const Tab = ({ element, children, passProps }) => {
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
             /> */}
-            <div>{children}</div>
+            {/* <div>{children}</div> */}
+            <div>{renderChild(props)}</div>
         </>
     );
 };

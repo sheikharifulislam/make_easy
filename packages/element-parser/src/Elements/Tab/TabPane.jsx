@@ -1,8 +1,9 @@
-const TabPane = ({ getChildElements, element, children }) => {
+const TabPane = ({ getChildElements, element, children, renderChild }) => {
     return (
         <div>
             {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
-            {children}
+            {/* {children} */}
+            {renderChild()}
         </div>
     );
 };

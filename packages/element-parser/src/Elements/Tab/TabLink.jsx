@@ -1,4 +1,4 @@
-const TabLink = ({ element, getChildElements, setActiveTab, index, children }) => {
+const TabLink = ({ setActiveTab, renderChild }) => {
     return (
         <a
             style={{
@@ -7,11 +7,13 @@ const TabLink = ({ element, getChildElements, setActiveTab, index, children }) =
             }}
             className="tab-link"
             onClick={(e) => {
-                e.preventDefault(), setActiveTab(index);
+                e.preventDefault();
+                setActiveTab(1);
             }}
         >
             {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
-            {children}
+            {/* {children} */}
+            {renderChild()}
         </a>
     );
 };

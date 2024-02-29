@@ -6,7 +6,7 @@ const Text = ({ className, element, children }) => {
     } = element;
     return (
         <p className={className} {...attr}>
-            {children}
+            {element.data.content}
         </p>
     );
 };

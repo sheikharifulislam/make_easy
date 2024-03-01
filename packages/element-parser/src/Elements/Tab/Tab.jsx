@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 const Tab = ({ element, children, passProps, renderChild }) => {
-    const [activeTab, setActiveTab] = useState(0);
+    const { settings } = element;
+    const [activeTab, setActiveTab] = useState(settings.default.activeTab);
 
     const props = {
         tabMenu: { setActiveTab },

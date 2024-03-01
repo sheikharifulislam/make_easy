@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Element from "./Element";
 
 // const RenderElements = ({ getChildElements, elements, isRenderElement, ...rest }) => {
@@ -34,23 +35,33 @@ import Element from "./Element";
 //     );
 // };
 
-const RenderElements = ({ currentElements, data, elProps = {} }) => {
+const RenderElements = ({ currentElements, data, elProps = {}, isRenderAble = () => true }) => {
     return (
         <>
-            {currentElements.map((id) => {
-                console.log({
-                    props: elProps[data[id].type],
-                    type: data[id].type,
-                });
+            {currentElements.map((id, index) => {
+                const isRender = isRenderAble(data[id], index);
                 return (
-                    <Element
-                        key={id}
-                        element={data[id]}
-                        {...elProps[data[id].type]}
-                        renderChild={(props) => (
-                            <RenderElements currentElements={data[id].children} data={data} elProps={props} />
+                    <Fragment key={id}>
+                        {isRender ? (
+                            <Element
+                                element={data[id]}
+                                {...elProps[data[id].type]}
+                                index={index}
+                                renderChild={(props, callback) => {
+                                    return (
+                                        <RenderElements
+                                            currentElements={data[id].children}
+                                            data={data}
+                                            elProps={props}
+                                            isRenderAble={callback}
+                                        />
+                                    );
+                                }}
+                            />
+                        ) : (
+                            <></>
                         )}
-                    />
+                    </Fragment>
                 );
             })}
         </>

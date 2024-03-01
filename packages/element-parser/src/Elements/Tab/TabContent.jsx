@@ -20,7 +20,7 @@ const TabContent = ({ children, activeTab, renderChild }) => {
                 }}
             /> */}
             {/* {children} */}
-            {renderChild()}
+            {renderChild({}, (data) => activeTab === data.id)}
         </div>
     );
 };

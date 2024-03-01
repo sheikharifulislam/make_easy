@@ -1,9 +1,12 @@
-const TabPane = ({ getChildElements, element, children, renderChild }) => {
+const TabPane = ({ getChildElements, element, children, renderChild, activeTab }) => {
+    console.log("from tabPane", activeTab);
+
     return (
-        <div>
+        <div className="this is tab pane">
             {/* <RenderElements getChildElements={getChildElements} elements={getChildElements(element.id)} /> */}
             {/* {children} */}
-            {renderChild()}
+            {/* {renderChild({}, (_, index) => activeTab === index)} */}
+            {renderChild({})}
         </div>
     );
 };

@@ -19,6 +19,11 @@ const tab = {
         id: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f2d",
         type: "tab",
         children: ["1ad0de13-a26d-d3a2-4481-4cf3fcb74f2e", "1ad0de13-a26d-d3a2-4481-4cf3fcb74f38"],
+        settings: {
+            default: {
+                activeTab: "1ad0de13-a26d-d3a2-4481-4cf3fcb74f39",
+            },
+        },
         data: {
             tabs: {
                 current: "Tab 3",

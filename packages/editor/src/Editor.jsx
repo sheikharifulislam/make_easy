@@ -1,15 +1,9 @@
-import RenderElements from "@easy_made/element-parser";
-import elements from "./data/tab";
+import Builder from "./builder";
 
 const Editor = () => {
-    // useEffect(() => {
-    //     const css = generateStyles(elements["root"].children, elements);
-    //     const style = document.createElement("style");
-    //     style.textContent = css;
-    //     document.head.appendChild(style);
-    // }, []);
+    const builder = new Builder();
 
-    return <RenderElements currentElements={elements.root.children} data={elements} />;
+    return builder.render();
 };
 
 export default Editor;
